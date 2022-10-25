@@ -11,7 +11,7 @@ testing.
 For this tutorial you will need a kubernetes cluster with Cartographer, kpack and Tekton installed. You can find
 [Cartographer's installation instructions here](https://github.com/vmware-tanzu/cartographer#installation), kpack's
 [here](https://github.com/pivotal/kpack/blob/main/docs/install.md) and Tekton's
-[here](https://github.com/pivotal/kpack/blob/main/docs/install.md).
+[here](https://github.com/tektoncd/pipeline/releases).
 
 You will also need an image registry for which you have read and write permission.
 
@@ -22,13 +22,13 @@ end-to-end testing and while we rely on it working in that role, no user guarant
 Command to run from the Cartographer directory:
 
 ```shell
-$ ./hack/setup.sh cluster cartographer-latest example-dependencies
+./hack/setup.sh cluster cartographer-latest example-dependencies
 ```
 
 If you later wish to tear down this generated cluster, run
 
 ```shell
-$ ./hack/setup.sh teardown
+./hack/setup.sh teardown
 ```
 
 ## Scenario
@@ -364,7 +364,7 @@ Using [kubectl tree](https://github.com/ahmetb/kubectl-tree) we can see our work
 turn is parent to a pipeline-run.
 
 ```shell
-$ kubectl tree workload hello-again
+kubectl tree workload hello-again
 ```
 
 ```console
